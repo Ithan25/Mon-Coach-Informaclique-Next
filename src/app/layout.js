@@ -15,7 +15,7 @@ export const metadata = {
     default: 'Mon Coach Informaclique | Dépannage & Formation Informatique à Nantes',
     template: '%s | Mon Coach Informaclique',
   },
-  description: 'Dépannage informatique à domicile, formation personnalisée et création de sites web vitrines à Nantes. Plus de 10 ans d\'expérience. Devis gratuit !',
+  description: 'Mon Coach Informaclique : Dépannage informatique à domicile, formation personnalisée et création de sites web vitrines à Nantes. Devis gratuit !',
   keywords: ['dépannage informatique', 'formation informatique', 'site web vitrine', 'Nantes', 'coach informatique', 'réparation ordinateur', 'aide numérique'],
   authors: [{ name: 'Mon Coach Informaclique' }],
   creator: 'Mon Coach Informaclique',
@@ -155,6 +155,18 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Mon Coach Informaclique',
+              alternateName: 'Mon Coach Informaclique Nantes',
+              url: 'https://www.moncoachinformaclique.fr',
+            })
+          }}
         />
       </head>
       <body className={poppins.className} suppressHydrationWarning>{children}</body>
