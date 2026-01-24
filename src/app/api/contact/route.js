@@ -17,7 +17,7 @@ export async function POST(request) {
 
         // 1. Email pour vous (Notification)
         await resend.emails.send({
-            from: 'Mon Coach Informaclique <contact@moncoachinformaclique.fr>',
+            from: 'Mon Coach Informaclique <contact@notifications.moncoachinformaclique.fr>',
             to: process.env.EMAIL_TO,
             replyTo: email,
             subject: `Nouveau contact : ${name} (${service || 'Général'})`,
@@ -37,7 +37,7 @@ export async function POST(request) {
 
         // 2. Email de confirmation pour le client
         await resend.emails.send({
-            from: 'Mon Coach Informaclique <contact@moncoachinformaclique.fr>',
+            from: 'Mon Coach Informaclique <contact@notifications.moncoachinformaclique.fr>',
             to: email,
             subject: `Confirmation de réception - Mon Coach Informaclique`,
             html: `
