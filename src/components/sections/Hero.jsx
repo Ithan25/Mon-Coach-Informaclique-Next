@@ -25,7 +25,7 @@ export default function Hero() {
             <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-32 right-20 hidden lg:block"
+                className="absolute top-32 right-20 hidden 2xl:block"
             >
                 <div className="w-16 h-16 rounded-2xl bg-[var(--color-accent)] flex items-center justify-center text-2xl shadow-lg">
                     💻
@@ -35,7 +35,7 @@ export default function Hero() {
             <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-40 right-32 hidden lg:block"
+                className="absolute bottom-40 right-32 hidden 2xl:block"
             >
                 <div className="w-14 h-14 rounded-2xl bg-[var(--color-primary-light)] flex items-center justify-center text-2xl shadow-lg">
                     📱
@@ -45,7 +45,7 @@ export default function Hero() {
             <motion.div
                 animate={{ y: [-15, 15, -15] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-60 left-16 hidden lg:block"
+                className="absolute top-60 left-16 hidden 2xl:block"
             >
                 <div className="w-12 h-12 rounded-2xl bg-[var(--color-secondary-light)] flex items-center justify-center text-xl shadow-lg">
                     🖥️
