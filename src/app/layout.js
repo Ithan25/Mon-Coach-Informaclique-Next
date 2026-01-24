@@ -66,6 +66,9 @@ export const metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  verification: {
+    google: 'XRHDYB0cC6AIxlU3PeNwWGOdcWZ3m0_pksXglznJGrg',
+  },
 }
 
 // JSON-LD Structured Data for Local Business
