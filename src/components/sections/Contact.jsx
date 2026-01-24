@@ -232,19 +232,22 @@ export default function Contact() {
         setIsSubmitting(true)
 
         try {
-            // Simulate API call delay
-            await new Promise(resolve => setTimeout(resolve, 1500))
-
-            // Here you would send to your backend
-            // The backend should also validate and sanitize all inputs
-            console.log('Form submitted (sanitized):', {
-                name: sanitizeInput(formData.name),
-                email: sanitizeInput(formData.email),
-                phone: sanitizeInput(formData.phone),
-                service: sanitizeInput(formData.service),
-                message: sanitizeInput(formData.message),
-                timestamp: new Date().toISOString(),
+            // Appel à notre API d'envoi d'email
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             })
+
+            const data = await response.json()
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Erreur lors de l\'envoi')
+            }
+
+            console.log('Email envoyé avec succès')
 
             incrementRateLimit()
             setIsSubmitted(true)
@@ -256,7 +259,8 @@ export default function Contact() {
             }, 5000)
 
         } catch (error) {
-            setSubmitError('Une erreur est survenue. Veuillez réessayer.')
+            console.error('Erreur:', error)
+            setSubmitError('Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou m\'appeler directement.')
         } finally {
             setIsSubmitting(false)
         }
