@@ -75,7 +75,6 @@ const sanitizeInput = (input) => {
         .replace(/[<>]/g, '') // Remove < and >
         .replace(/javascript:/gi, '') // Remove javascript: protocol
         .replace(/on\w+=/gi, '') // Remove event handlers
-        .trim()
         .slice(0, 1000) // Limit length
 }
 

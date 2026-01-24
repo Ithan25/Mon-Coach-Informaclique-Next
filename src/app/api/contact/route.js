@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request) {
     try {
@@ -13,34 +15,12 @@ export async function POST(request) {
             )
         }
 
-        // Configuration du transporteur IONOS
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.ionos.fr',
-            port: 465, // Port sécurisé SSL
-            secure: true,
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        })
-
         // 1. Email pour vous (Notification)
-        const mailOptionsAdmin = {
-            from: `"Site Web" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_USER, // Vous recevez l'email sur votre propre adresse
-            replyTo: email, // Pour répondre directement au client
+        await resend.emails.send({
+            from: 'Mon Coach Informaclique <contact@moncoachinformaclique.fr>',
+            to: process.env.EMAIL_TO,
+            replyTo: email,
             subject: `Nouveau contact : ${name} (${service || 'Général'})`,
-            text: `
-Nouveau message via le site web :
-
-Nom : ${name}
-Email : ${email}
-Téléphone : ${phone || 'Non renseigné'}
-Service : ${service || 'Non spécifié'}
-
-Message :
-${message}
-            `,
             html: `
 <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
     <h2 style="color: #FF6B6B;">Nouveau contact client</h2>
@@ -53,14 +33,13 @@ ${message}
     <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; white-space: pre-wrap;">${message}</div>
 </div>
             `,
-        }
+        })
 
-        // 2. Email de confirmation pour le client (Optionnel mais pro)
-        const mailOptionsClient = {
-            from: `"Mon Coach Informaclique" <${process.env.EMAIL_USER}>`,
-            to: email, // Email du client
+        // 2. Email de confirmation pour le client
+        await resend.emails.send({
+            from: 'Mon Coach Informaclique <contact@moncoachinformaclique.fr>',
+            to: email,
             subject: `Confirmation de réception - Mon Coach Informaclique`,
-            text: `Bonjour ${name},\n\nJ'ai bien reçu votre message et je vous en remercie.\nJe vous recontacte sous 24h pour répondre à votre demande.\n\nCordialement,\n\nMon Coach Informaclique\n06 40 74 99 62`,
             html: `
 <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
     <h2 style="color: #FF6B6B;">Message bien reçu !</h2>
@@ -76,18 +55,14 @@ ${message}
     <a href="https://www.moncoachinformaclique.fr">www.moncoachinformaclique.fr</a></p>
 </div>
             `,
-        }
-
-        // Envoi des deux emails
-        await transporter.sendMail(mailOptionsAdmin)
-        await transporter.sendMail(mailOptionsClient) // Vous pouvez commenter cette ligne si vous ne voulez pas de confirmation auto
+        })
 
         return NextResponse.json({ success: true })
 
     } catch (error) {
         console.error('Erreur envoi email:', error)
         return NextResponse.json(
-            { error: 'Erreur lors de l\'envoi de l\'email' },
+            { error: error.message || 'Erreur lors de l\'envoi de l\'email' },
             { status: 500 }
         )
     }
