@@ -57,6 +57,7 @@
 @layer base {
   * {
     box-sizing: border-box;
+    cursor: none !important;
   }
 
   html {
@@ -70,6 +71,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    cursor: none;
   }
 
   h1,
