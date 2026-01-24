@@ -18,8 +18,8 @@ import {
 const services = [
     {
         icon: Wrench,
-        title: "Dépannage à Domicile",
-        description: "Diagnostic et réparation de vos problèmes informatiques directement chez vous. Virus, lenteurs, pannes... je trouve la solution !",
+        title: "Dépannage à Domicile Nantes",
+        description: "Diagnostic et réparation de vos problèmes informatiques directement chez vous à Nantes et alentours. Virus, lenteurs, pannes... je me déplace pour vous aider !",
         price: "30€/h",
         color: "var(--color-primary)",
         bgColor: "var(--color-primary)",
@@ -27,7 +27,7 @@ const services = [
     {
         icon: GraduationCap,
         title: "Formation Informatique",
-        description: "Apprenez à maîtriser Windows, Office, internet et vos logiciels du quotidien avec des cours adaptés à votre rythme.",
+        description: "Apprenez à maîtriser Windows, Office, internet et vos logiciels avec des cours d'informatique à Nantes adaptés aux seniors et débutants.",
         price: "Sur devis",
         color: "var(--color-blue)",
         bgColor: "var(--color-blue)",
@@ -50,8 +50,8 @@ const services = [
     },
     {
         icon: Globe,
-        title: "Création Sites Web",
-        description: "Je crée votre site vitrine professionnel pour booster votre visibilité en ligne. Idéal pour commerces et artisans !",
+        title: "Création Sites Web Nantes",
+        description: "Je crée votre site vitrine professionnel pour booster la visibilité de votre activité à Nantes. Idéal pour artisans, commerçants et libéraux !",
         price: "À partir de 500€",
         color: "var(--color-blue)",
         bgColor: "var(--color-blue-light)",
@@ -109,7 +109,7 @@ export default function Services() {
                         Mes Services
                     </Badge>
                     <h2 className="mb-6">
-                        Des solutions <span className="text-gradient">sur mesure</span> pour tous vos besoins
+                        Dépannage & Formation <span className="text-gradient">Informatique à Nantes</span>
                     </h2>
                     <p className="text-lg text-[var(--color-gray)]">
                         Que vous soyez particulier ou professionnel, je vous accompagne dans tous vos projets informatiques

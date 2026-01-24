@@ -282,7 +282,7 @@ export default function Contact() {
                         Contact
                     </Badge>
                     <h2 className="mb-6">
-                        Contactez-<span className="text-gradient">moi</span>
+                        Contactez votre <span className="text-gradient">Coach à Nantes</span>
                     </h2>
                     <p className="text-lg text-[var(--color-gray)]">
                         Un problème informatique ? Un projet de site web ? N'hésitez pas à me contacter

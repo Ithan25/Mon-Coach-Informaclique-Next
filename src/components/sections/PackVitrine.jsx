@@ -83,7 +83,7 @@ export default function PackVitrine() {
                         Le Pack "Vitrine Nantaise"
                     </h2>
                     <p className="text-base sm:text-xl text-white/80">
-                        Vos clients sont sur leur téléphone. Ne laissez pas vos concurrents prendre votre place sur Google !
+                        Améliorez votre visibilité locale à Nantes. Un site web moderne, rapide et optimisé pour que vos clients vous trouvent sur Google.
                     </p>
                 </motion.div>
 
