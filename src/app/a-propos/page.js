@@ -39,7 +39,7 @@ export default function AProposPage() {
         {
             icon: Award,
             title: "Expertise Reconnue",
-            description: "Plus de 10 ans d'expérience dans l'accompagnement informatique des particuliers et professionnels."
+            description: "Un professionnel expérimenté dans l'accompagnement informatique des particuliers et professionnels."
         }
     ]
 
@@ -133,7 +133,7 @@ export default function AProposPage() {
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <Award className="w-5 h-5" />
-                                        <span>+10 ans d'expérience</span>
+                                        <span>Expérimenté</span>
                                     </li>
                                 </ul>
                             </motion.div>
