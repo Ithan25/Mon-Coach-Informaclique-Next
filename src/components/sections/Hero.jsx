@@ -61,7 +61,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-center lg:text-left"
                     >
-                        <Badge variant="accent" className="mb-4 sm:mb-6 text-xs sm:text-sm gap-2">
+                        <Badge variant="accent" className="mb-2 sm:mb-2 text-xs sm:text-sm gap-2">
                             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
                             Votre partenaire numérique
                         </Badge>

@@ -3,15 +3,18 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-    { href: '#services', label: 'Services' },
-    { href: '#pack-vitrine', label: 'Pack Vitrine' },
-    { href: '#abonnement', label: 'Abonnement' },
-    { href: '#temoignages', label: 'Témoignages' },
-    { href: '#a-propos', label: 'À propos' },
+    { href: '/#services', label: 'Services' },
+    { href: '/#pack-vitrine', label: 'Pack Vitrine' },
+    { href: '/#abonnement', label: 'Abonnement' },
+    { href: '/#temoignages', label: 'Témoignages' },
+    { href: '/#a-propos', label: 'À propos' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/blog', label: 'Blog' },
 ]
 
 export default function Header() {
@@ -27,10 +30,13 @@ export default function Header() {
     }, [])
 
     const scrollToSection = (e, href) => {
-        e.preventDefault()
-        const element = document.querySelector(href)
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
+        // If we're on homepage and it's a hash link, scroll smoothly
+        if (window.location.pathname === '/' && href.startsWith('/#')) {
+            e.preventDefault()
+            const element = document.querySelector(href.replace('/', ''))
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
         }
         setIsMobileMenuOpen(false)
     }
@@ -47,13 +53,9 @@ export default function Header() {
             <div className="container-custom">
                 <nav className="flex items-center justify-between">
                     {/* Logo */}
-                    <a
-                        href="#"
+                    <Link
+                        href="/"
                         className="flex items-center gap-2 group"
-                        onClick={(e) => {
-                            e.preventDefault()
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }}
                     >
                         <Image
                             src="/logo.png"
@@ -65,30 +67,31 @@ export default function Header() {
                         <span className="text-base sm:text-lg font-bold text-[var(--color-dark)]">
                             <span className="hidden xs:inline">Mon Coach </span><span className="text-[var(--color-primary)]">Informaclique</span>
                         </span>
-                    </a>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.href}
                                 href={link.href}
                                 onClick={(e) => scrollToSection(e, link.href)}
                                 className="text-[var(--color-gray)] font-medium hover:text-[var(--color-primary)] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] after:transition-all hover:after:w-full"
                             >
                                 {link.label}
-                            </a>
+                            </Link>
                         ))}
                     </div>
 
                     {/* CTA Button */}
                     <div className="hidden lg:block">
-                        <Button
-                            onClick={(e) => scrollToSection(e, '#contact')}
-                            className="shadow-lg shadow-[var(--color-primary)]/30"
-                        >
-                            Contactez-moi
-                        </Button>
+                        <Link href="/#contact">
+                            <Button
+                                className="shadow-lg shadow-[var(--color-primary)]/30"
+                            >
+                                Contactez-moi
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -115,21 +118,20 @@ export default function Header() {
             >
                 <div className="container-custom py-4 flex flex-col gap-2">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.href}
                             href={link.href}
                             onClick={(e) => scrollToSection(e, link.href)}
                             className="py-3 px-4 text-[var(--color-gray)] font-medium hover:text-[var(--color-primary)] hover:bg-[var(--color-light)] rounded-lg transition-colors"
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
-                    <Button
-                        onClick={(e) => scrollToSection(e, '#contact')}
-                        className="mt-2"
-                    >
-                        Contactez-moi
-                    </Button>
+                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Button className="mt-2 w-full">
+                            Contactez-moi
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </header>

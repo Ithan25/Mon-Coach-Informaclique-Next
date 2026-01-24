@@ -24,5 +24,23 @@ export default function sitemap() {
             changeFrequency: 'monthly',
             priority: 0.9,
         },
+        {
+            url: 'https://www.moncoachinformaclique.fr/a-propos',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://www.moncoachinformaclique.fr/faq',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://www.moncoachinformaclique.fr/blog',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.6,
+        },
     ]
 }

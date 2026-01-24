@@ -1,5 +1,6 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import ClientLayout from '@/components/layout/ClientLayout'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -169,7 +170,9 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={poppins.className} suppressHydrationWarning>{children}</body>
+      <body className={poppins.className} suppressHydrationWarning>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
   )
 }
