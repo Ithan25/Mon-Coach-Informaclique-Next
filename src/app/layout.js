@@ -63,8 +63,12 @@ export const metadata = {
     canonical: 'https://www.moncoachinformaclique.fr',
   },
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
+    ],
     apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.png',
   },
   manifest: '/site.webmanifest',
   verification: {
