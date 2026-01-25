@@ -42,19 +42,20 @@ export default function Abonnement() {
     }
 
     return (
-        <section id="abonnement" className="section-padding bg-[var(--color-light)] relative overflow-hidden">
+        <section id="abonnement" className="section-padding bg-[var(--color-light)] relative overflow-x-hidden">
             {/* Decorative shapes */}
             <div className="absolute top-20 left-20 w-64 h-64 bg-[var(--color-secondary)] rounded-full opacity-10 blur-3xl" />
             <div className="absolute bottom-20 right-20 w-80 h-80 bg-[var(--color-accent)] rounded-full opacity-10 blur-3xl" />
 
-            <div className="container-custom relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container-custom relative z-10 px-4 sm:px-6 max-w-full">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Column - Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
+                        className="max-w-full overflow-hidden"
                     >
                         <Badge variant="secondary" className="mb-4 gap-2">
                             <Clock className="w-4 h-4" />
@@ -96,13 +97,14 @@ export default function Abonnement() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
+                        className="max-w-full overflow-hidden"
                     >
-                        <Card className="relative overflow-hidden p-5 sm:p-8 shadow-xl">
+                        <Card className="relative overflow-hidden p-5 sm:p-8 max-w-full">
                             {/* Offer badge */}
-                            <div className="absolute top-0 right-0">
-                                <div className="bg-[var(--color-accent)] text-[var(--color-dark)] px-4 sm:px-6 py-2 text-xs sm:text-sm font-bold transform rotate-0 origin-top-right flex items-center gap-2 rounded-bl-2xl">
-                                    <Gift className="w-4 h-4" />
-                                    3 mois offerts
+                            <div className="absolute top-0 right-0 max-w-[50%] sm:max-w-none">
+                                <div className="bg-[var(--color-accent)] text-[var(--color-dark)] px-3 sm:px-6 py-2 text-xs sm:text-sm font-bold transform rotate-0 origin-top-right flex items-center gap-1 sm:gap-2 rounded-bl-2xl">
+                                    <Gift className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    <span className="whitespace-nowrap">3 mois offerts</span>
                                 </div>
                             </div>
 

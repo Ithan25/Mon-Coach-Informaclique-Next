@@ -7,6 +7,7 @@ import Abonnement from '@/components/sections/Abonnement'
 import Testimonials from '@/components/sections/Testimonials'
 import About from '@/components/sections/About'
 import Contact from '@/components/sections/Contact'
+import InterventionMap from '@/components/sections/InterventionMap'
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
         <Abonnement />
         <Testimonials />
         <About />
+        <InterventionMap />
         <Contact />
       </main>
       <Footer />

@@ -113,10 +113,10 @@ export default function Header() {
             <div
                 className={cn(
                     'lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden',
-                    isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    isMobileMenuOpen ? 'max-h-170 opacity-100' : 'max-h-0 opacity-0'
                 )}
             >
-                <div className="container-custom py-4 flex flex-col gap-2">
+                <div className="container-custom py-4 pb-6 flex flex-col gap-2">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -128,7 +128,7 @@ export default function Header() {
                         </Link>
                     ))}
                     <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                        <Button className="mt-2 w-full">
+                        <Button className="mt-2 mb-2 w-full">
                             Contactez-moi
                         </Button>
                     </Link>
