@@ -64,11 +64,12 @@ export const metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
     ],
     apple: '/apple-touch-icon.png',
-    shortcut: '/favicon.png',
+    shortcut: '/favicon.ico',
   },
   manifest: '/site.webmanifest',
   verification: {
