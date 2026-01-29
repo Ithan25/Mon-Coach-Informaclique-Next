@@ -42,5 +42,17 @@ export default function sitemap() {
             changeFrequency: 'weekly',
             priority: 0.6,
         },
+        {
+            url: 'https://www.moncoachinformaclique.fr/mentions-legales',
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
+        {
+            url: 'https://www.moncoachinformaclique.fr/confidentialite',
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
     ]
 }

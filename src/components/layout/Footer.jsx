@@ -2,6 +2,7 @@
 
 import { Phone, Mail, MapPin, Linkedin, ArrowUp } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -156,13 +157,13 @@ export default function Footer() {
                         </p>
                         <div className="flex items-center gap-6">
                             <div className="flex gap-4 text-sm">
-                                <a href="#" className="text-[var(--color-gray-light)] hover:text-white transition-colors">
+                                <Link href="/mentions-legales" className="text-[var(--color-gray-light)] hover:text-white transition-colors">
                                     Mentions légales
-                                </a>
+                                </Link>
                                 <span className="text-white/20">•</span>
-                                <a href="#" className="text-[var(--color-gray-light)] hover:text-white transition-colors">
+                                <Link href="/confidentialite" className="text-[var(--color-gray-light)] hover:text-white transition-colors">
                                     Confidentialité
-                                </a>
+                                </Link>
                             </div>
                             <button
                                 onClick={scrollToTop}
