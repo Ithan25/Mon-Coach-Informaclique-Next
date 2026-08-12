@@ -19,7 +19,7 @@ import {
     Calendar,
     Shield,
     ArrowRight,
-    Phone,
+    Mail,
     ChevronDown
 } from 'lucide-react'
 import Link from 'next/link'
@@ -37,7 +37,7 @@ export default function FAQPage() {
         {
             icon: Euro,
             question: "Quels sont vos tarifs et comment obtenir un devis ?",
-            answer: "Mes tarifs sont transparents : 45€/heure pour le dépannage à domicile, 40€/heure pour les formations. Le déplacement est offert dans Nantes intra-muros. Pour un devis gratuit et sans engagement, appelez-moi directement au 06 40 74 99 62 ou utilisez le formulaire de contact. Je vous réponds sous 24h."
+            answer: "Mes tarifs sont transparents : 45€/heure pour le dépannage à domicile, 40€/heure pour les formations. Le déplacement est offert dans Nantes intra-muros. Pour un devis gratuit et sans engagement, contactez-moi par email à ithan.boismard@gmail.com."
         },
         {
             icon: Wrench,
@@ -52,7 +52,7 @@ export default function FAQPage() {
         {
             icon: Clock,
             question: "Quel est le délai d'intervention ?",
-            answer: "Je m'efforce d'intervenir rapidement. Pour les urgences (ordinateur professionnel en panne par exemple), je peux souvent passer dans la journée ou le lendemain. Pour les interventions moins urgentes, comptez généralement 2-3 jours ouvrés. Je m'adapte à vos disponibilités, y compris le samedi matin."
+            answer: "Je m'efforce d'intervenir rapidement. Pour les urgences (ordinateur professionnel en panne par exemple), je peux souvent passer dans la journée ou le lendemain. Pour les interventions moins urgentes, comptez généralement 2-3 jours ouvrés. Je m'adapte à vos disponibilités."
         },
         {
             icon: Globe,
@@ -72,7 +72,7 @@ export default function FAQPage() {
         {
             icon: Calendar,
             question: "Comment prendre rendez-vous ?",
-            answer: "C'est très simple : appelez-moi au 06 40 74 99 62 (je réponds rapidement) ou envoyez-moi un message via le formulaire de contact du site. Décrivez brièvement votre problème ou besoin, et nous convenons ensemble d'un créneau qui vous arrange. Je suis disponible du lundi au vendredi de 9h à 19h, et le samedi matin."
+            answer: "C'est très simple : envoyez-moi un email à ithan.boismard@gmail.com avec une brève description de votre besoin, et nous convenons ensemble d'un créneau qui vous arrange."
         },
         {
             icon: Shield,
@@ -186,9 +186,9 @@ export default function FAQPage() {
                                         Me contacter <ArrowRight className="w-4 h-4 ml-2" />
                                     </Button>
                                 </Link>
-                                <a href="tel:0640749962">
+                                <a href="mailto:ithan.boismard@gmail.com">
                                     <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                                        <Phone className="w-4 h-4 mr-2" /> 06 40 74 99 62
+                                        <Mail className="w-4 h-4 mr-2" /> ithan.boismard@gmail.com
                                     </Button>
                                 </a>
                             </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Mail, MapPin, Linkedin, ArrowUp } from 'lucide-react'
+import { Mail, MapPin, Linkedin, ArrowUp } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -120,19 +120,11 @@ export default function Footer() {
                         <h4 className="text-sm font-bold uppercase tracking-wider text-white/60 mb-5">Contact</h4>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:+33640749962" className="flex items-center gap-3 text-[var(--color-gray-light)] hover:text-white transition-colors group">
-                                    <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[var(--color-primary)]/20 transition-colors">
-                                        <Phone className="w-4 h-4 text-[var(--color-primary)]" />
-                                    </div>
-                                    <span className="text-sm">06 40 74 99 62</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:contact@moncoachinformaclique.fr" className="flex items-center gap-3 text-[var(--color-gray-light)] hover:text-white transition-colors group">
+                                <a href="mailto:ithan.boismard@gmail.com" className="flex items-center gap-3 text-[var(--color-gray-light)] hover:text-white transition-colors group">
                                     <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[var(--color-primary)]/20 transition-colors shrink-0">
                                         <Mail className="w-4 h-4 text-[var(--color-primary)]" />
                                     </div>
-                                    <span className="text-sm truncate">contact@moncoach...</span>
+                                    <span className="text-sm truncate">ithan.boismard@gmail.com</span>
                                 </a>
                             </li>
                             <li>

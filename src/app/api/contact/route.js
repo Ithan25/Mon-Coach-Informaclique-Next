@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder')
 
 export async function POST(request) {
     try {
@@ -51,7 +51,7 @@ export async function POST(request) {
     <br>
     <p>Cordialement,</p>
     <p><strong>Votre Coach Informatique</strong><br>
-    06 40 74 99 62<br>
+    ithan.boismard@gmail.com<br>
     <a href="https://www.moncoachinformaclique.fr">www.moncoachinformaclique.fr</a></p>
 </div>
             `,

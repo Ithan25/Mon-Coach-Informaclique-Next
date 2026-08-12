@@ -85,8 +85,7 @@ const jsonLd = {
   name: 'Mon Coach Informaclique',
   description: 'Dépannage informatique à domicile, formation personnalisée et création de sites web vitrines à Nantes',
   url: 'https://www.moncoachinformaclique.fr',
-  telephone: '+33640749962',
-  email: 'contact@moncoachinformaclique.fr',
+  email: 'ithan.boismard@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Nantes',

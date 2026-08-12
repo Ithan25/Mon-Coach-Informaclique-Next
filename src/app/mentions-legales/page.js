@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { FileText, User, Building, Mail, Phone, Globe, Server, Shield, Scale } from 'lucide-react'
+import { FileText, User, Building, Mail, Globe, Server, Shield, Scale } from 'lucide-react'
 import Link from 'next/link'
 
 export default function MentionsLegalesPage() {
@@ -18,8 +18,7 @@ export default function MentionsLegalesPage() {
                     <p><strong>Statut :</strong> Auto-entrepreneur</p>
                     <p><strong>Activité :</strong> Dépannage informatique, formation et création de sites web</p>
                     <p><strong>Adresse :</strong> Nantes, Loire-Atlantique (44), France</p>
-                    <p><strong>Téléphone :</strong> <a href="tel:+33640749962" className="text-[var(--color-primary)] hover:underline">06 40 74 99 62</a></p>
-                    <p><strong>Email :</strong> <a href="mailto:contact@moncoachinformaclique.fr" className="text-[var(--color-primary)] hover:underline">contact@moncoachinformaclique.fr</a></p>
+                    <p><strong>Email :</strong> <a href="mailto:ithan.boismard@gmail.com" className="text-[var(--color-primary)] hover:underline">ithan.boismard@gmail.com</a></p>
                 </div>
             )
         },
@@ -57,13 +56,13 @@ export default function MentionsLegalesPage() {
             content: (
                 <div className="space-y-3">
                     <p>
-                        Les informations recueillies via le formulaire de contact sont destinées uniquement à répondre à vos demandes et ne sont jamais transmises à des tiers.
+                        Les informations transmises par email sont destinées uniquement à répondre à vos demandes et ne sont jamais transmises à des tiers.
                     </p>
                     <p>
                         Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
                     </p>
                     <p>
-                        Pour exercer ce droit, contactez-nous à : <a href="mailto:contact@moncoachinformaclique.fr" className="text-[var(--color-primary)] hover:underline">contact@moncoachinformaclique.fr</a>
+                        Pour exercer ce droit, contactez-nous à : <a href="mailto:ithan.boismard@gmail.com" className="text-[var(--color-primary)] hover:underline">ithan.boismard@gmail.com</a>
                     </p>
                     <p>
                         Pour plus d'informations, consultez notre <Link href="/confidentialite" className="text-[var(--color-primary)] hover:underline">politique de confidentialité</Link>.

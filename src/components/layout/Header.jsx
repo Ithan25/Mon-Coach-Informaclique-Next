@@ -11,7 +11,6 @@ const navLinks = [
     { href: '/#services', label: 'Services' },
     { href: '/#pack-vitrine', label: 'Pack Vitrine' },
     { href: '/#abonnement', label: 'Abonnement' },
-    { href: '/#temoignages', label: 'Témoignages' },
     { href: '/#a-propos', label: 'À propos' },
     { href: '/faq', label: 'FAQ' },
     { href: '/blog', label: 'Blog' },

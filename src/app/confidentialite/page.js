@@ -18,7 +18,7 @@ export default function ConfidentialitePage() {
                         Lors de l'utilisation de notre site, nous pouvons collecter les données suivantes :
                     </p>
                     <ul className="list-disc list-inside space-y-2 pl-2">
-                        <li><strong>Via le formulaire de contact :</strong> Nom, prénom, adresse email, numéro de téléphone, message</li>
+                        <li><strong>Via le contact email :</strong> Nom, prénom, adresse email, message</li>
                         <li><strong>Données de navigation :</strong> Adresse IP, type de navigateur, pages visitées (via cookies techniques)</li>
                     </ul>
                     <p>
@@ -50,9 +50,8 @@ export default function ConfidentialitePage() {
             title: "Base légale du traitement",
             content: (
                 <div className="space-y-3">
-                    <p>Le traitement de vos données repose sur :</p>
                     <ul className="list-disc list-inside space-y-2 pl-2">
-                        <li><strong>Votre consentement :</strong> Lorsque vous remplissez le formulaire de contact</li>
+                        <li><strong>Votre consentement :</strong> Lorsque vous nous envoyez un email</li>
                         <li><strong>L'intérêt légitime :</strong> Pour l'amélioration de nos services et l'analyse du trafic</li>
                         <li><strong>L'exécution contractuelle :</strong> Pour la réalisation de prestations demandées</li>
                     </ul>
@@ -91,7 +90,7 @@ export default function ConfidentialitePage() {
                         <li><strong>Droit de limitation :</strong> Limiter le traitement de vos données</li>
                     </ul>
                     <p>
-                        Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@moncoachinformaclique.fr" className="text-[var(--color-primary)] hover:underline">contact@moncoachinformaclique.fr</a>
+                        Pour exercer ces droits, contactez-nous à : <a href="mailto:ithan.boismard@gmail.com" className="text-[var(--color-primary)] hover:underline">ithan.boismard@gmail.com</a>
                     </p>
                 </div>
             )
@@ -138,9 +137,6 @@ export default function ConfidentialitePage() {
                         Notre site est hébergé par Vercel (États-Unis). Le transfert de données vers les États-Unis
                         est encadré par le Data Privacy Framework UE-États-Unis.
                     </p>
-                    <p>
-                        Les emails sont envoyés via Resend, qui garantit également la conformité RGPD.
-                    </p>
                 </div>
             )
         },
@@ -153,8 +149,7 @@ export default function ConfidentialitePage() {
                         Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits :
                     </p>
                     <p>
-                        <strong>Email :</strong> <a href="mailto:contact@moncoachinformaclique.fr" className="text-[var(--color-primary)] hover:underline">contact@moncoachinformaclique.fr</a><br />
-                        <strong>Téléphone :</strong> <a href="tel:+33640749962" className="text-[var(--color-primary)] hover:underline">06 40 74 99 62</a>
+                        <strong>Email :</strong> <a href="mailto:ithan.boismard@gmail.com" className="text-[var(--color-primary)] hover:underline">ithan.boismard@gmail.com</a>
                     </p>
                     <p>
                         En cas de litige, vous pouvez également saisir la CNIL (Commission Nationale de l'Informatique et des Libertés) :

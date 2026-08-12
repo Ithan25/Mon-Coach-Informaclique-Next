@@ -15,7 +15,7 @@ import {
     Award,
     Sparkles,
     ArrowRight,
-    Phone
+    Mail
 } from 'lucide-react'
 import Link from 'next/link'
 
@@ -242,9 +242,9 @@ export default function AProposPage() {
                                         Me contacter <ArrowRight className="w-4 h-4 ml-2" />
                                     </Button>
                                 </Link>
-                                <a href="tel:0640749962">
+                                <a href="mailto:ithan.boismard@gmail.com">
                                     <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                                        <Phone className="w-4 h-4 mr-2" /> 06 40 74 99 62
+                                        <Mail className="w-4 h-4 mr-2" /> ithan.boismard@gmail.com
                                     </Button>
                                 </a>
                             </div>
